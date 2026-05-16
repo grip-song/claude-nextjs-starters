@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { Menu, X, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { cn } from "@/lib/utils"
 
@@ -61,6 +61,9 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-64 pt-10">
+              <SheetHeader className="sr-only">
+                <SheetTitle>네비게이션 메뉴</SheetTitle>
+              </SheetHeader>
               <nav className="flex flex-col gap-1">
                 {navLinks.map((link) => (
                   <Link

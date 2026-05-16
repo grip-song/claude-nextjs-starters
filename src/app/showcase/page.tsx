@@ -259,7 +259,7 @@ export default function ShowcasePage() {
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <Avatar className="size-8">
-                  <AvatarImage src="https://github.com/shadcn.png" />
+                  <AvatarImage src="https://github.com/shadcn.png" alt="shadcn 프로필 이미지" />
                   <AvatarFallback>CN</AvatarFallback>
                 </Avatar>
                 <Avatar className="size-10">
