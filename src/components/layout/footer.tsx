@@ -61,10 +61,14 @@ export function Footer() {
             Built with{" "}
             <Link href="https://nextjs.org" className="underline underline-offset-4 hover:text-foreground">
               Next.js
-            </Link>{" "}
-            &{" "}
+            </Link>
+            {", "}
             <Link href="https://ui.shadcn.com" className="underline underline-offset-4 hover:text-foreground">
               shadcn/ui
+            </Link>
+            {" & "}
+            <Link href="https://tailwindcss.com" className="underline underline-offset-4 hover:text-foreground">
+              Tailwind CSS
             </Link>
           </p>
         </div>
