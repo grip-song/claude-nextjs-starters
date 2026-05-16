@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\YM\\\\Desktop\\\\claude\\\\workspace\\\\claude-nextjs-starters\" -Recurse -Directory)",
+      "Bash(Select-Object FullName)",
+      "Bash(Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\YM\\\\Desktop\\\\claude\\\\workspace\\\\claude-nextjs-starters\\\\node_modules\" | Where-Object { $_.Name -match \"^\\(@radix-ui|lucide-react\\)\" } | Select-Object -ExpandProperty Name)",
+      "PowerShell(Get-ChildItem *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\YM\\\\Desktop\\\\claude\\\\workspace\\\\claude-nextjs-starters\\\\node_modules\" -Directory)",
+      "Bash(Select-Object -First 20)",
+      "Bash(npm install *)",
+      "Bash(npx shadcn *)",
+      "Bash(node -e \"require\\('react-hook-form'\\)\")",
+      "Bash(npm run *)",
+      "mcp__playwright",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\YM\\\\Desktop\\\\claude\\\\workspace\\\\claude-nextjs-starters\" -Force)",
+      "Bash(Select-Object Name, Mode)",
+      "Bash(npm list *)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(xargs grep -l \"import.*from.*['\\\\\"]@/\")",
+      "mcp__ide__getDiagnostics",
+      "Bash(Start-Sleep -Seconds 5)",
+      "Bash(Get-Content \"C:\\\\Users\\\\YM\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-YM-Desktop-claude-workspace-claude-nextjs-starters\\\\f22557c0-7001-4467-aece-bb701040726d\\\\tasks\\\\b0f2pb53u.output\" -Tail 20)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\YM\\\\Desktop\\\\claude\\\\workspace\\\\claude-nextjs-starters\" -Depth 2 | Where-Object { $_.FullName -notmatch 'node_modules' } | Select-Object FullName)",
+      "PowerShell(dir \"C:\\\\Users\\\\YM\\\\Desktop\\\\claude\\\\workspace\\\\claude-nextjs-starters\\\\src\" -Recurse | Where-Object { !$_.PSIsContainer } | Select-Object FullName)",
+      "PowerShell(cmd /c \"dir /a \"\"C:\\\\Users\\\\YM\\\\Desktop\\\\claude\\\\workspace\\\\claude-nextjs-starters\\\\node_modules\\\\next\\\\dist\\\\docs\"\"\")",
+      "PowerShell(cmd /c \"dir /a /s \"\"C:\\\\Users\\\\YM\\\\Desktop\\\\claude\\\\workspace\\\\claude-nextjs-starters\\\\node_modules\\\\next\\\\dist\\\\docs\\\\01-app\"\" | findstr /i \"\".md\"\"\")",
+      "PowerShell(gh auth *)",
+      "PowerShell(gh repo *)",
+      "Skill(git:commit)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "playwright"
+  ]
+}
