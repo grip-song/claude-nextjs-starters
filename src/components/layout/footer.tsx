@@ -36,16 +36,20 @@ export function Footer() {
             <div key={category} className="space-y-3">
               <h3 className="text-sm font-semibold">{category}</h3>
               <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+                {links.map((link) => {
+                  const isExternal = link.href.startsWith("http")
+                  return (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                        {...(isExternal && { target: "_blank", rel: "noopener noreferrer" })}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  )
+                })}
               </ul>
             </div>
           ))}
@@ -59,15 +63,15 @@ export function Footer() {
           </p>
           <p className="text-sm text-muted-foreground">
             Built with{" "}
-            <Link href="https://nextjs.org" className="underline underline-offset-4 hover:text-foreground">
+            <Link href="https://nextjs.org" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">
               Next.js
             </Link>
             {", "}
-            <Link href="https://ui.shadcn.com" className="underline underline-offset-4 hover:text-foreground">
+            <Link href="https://ui.shadcn.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">
               shadcn/ui
             </Link>
             {" & "}
-            <Link href="https://tailwindcss.com" className="underline underline-offset-4 hover:text-foreground">
+            <Link href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">
               Tailwind CSS
             </Link>
           </p>
