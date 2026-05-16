@@ -106,7 +106,7 @@ export default function DashboardPage() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  {recentActivity.map((item) => (
+                  {recentActivity.map((item, i) => (
                     <div key={item.id}>
                       <div className="flex items-center gap-3">
                         <Avatar className="size-8">
