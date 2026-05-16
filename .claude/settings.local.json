@@ -30,7 +30,8 @@
       "PowerShell(cmd /c \"dir /a /s \"\"C:\\\\Users\\\\YM\\\\Desktop\\\\claude\\\\workspace\\\\claude-nextjs-starters\\\\node_modules\\\\next\\\\dist\\\\docs\\\\01-app\"\" | findstr /i \"\".md\"\"\")",
       "PowerShell(gh auth *)",
       "PowerShell(gh repo *)",
-      "Skill(git:commit)"
+      "Skill(git:commit)",
+      "Skill(update-config)"
     ]
   },
   "enableAllProjectMcpServers": true,
