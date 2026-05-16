@@ -42,11 +42,11 @@ const stats = [
 ]
 
 const recentActivity = [
-  { user: "김민준", action: "새 프로젝트 생성", time: "2분 전", avatar: "KM" },
-  { user: "이서연", action: "파일 업로드 완료", time: "15분 전", avatar: "LS" },
-  { user: "박지호", action: "멤버 초대 발송", time: "1시간 전", avatar: "PJ" },
-  { user: "최수아", action: "대시보드 설정 변경", time: "3시간 전", avatar: "CS" },
-  { user: "정현우", action: "결제 완료", time: "5시간 전", avatar: "JH" },
+  { id: "act-1", user: "김민준", action: "새 프로젝트 생성", time: "2분 전", avatar: "KM" },
+  { id: "act-2", user: "이서연", action: "파일 업로드 완료", time: "15분 전", avatar: "LS" },
+  { id: "act-3", user: "박지호", action: "멤버 초대 발송", time: "1시간 전", avatar: "PJ" },
+  { id: "act-4", user: "최수아", action: "대시보드 설정 변경", time: "3시간 전", avatar: "CS" },
+  { id: "act-5", user: "정현우", action: "결제 완료", time: "5시간 전", avatar: "JH" },
 ]
 
 const projectProgress = [
@@ -106,8 +106,8 @@ export default function DashboardPage() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  {recentActivity.map((item, i) => (
-                    <div key={i}>
+                  {recentActivity.map((item) => (
+                    <div key={item.id}>
                       <div className="flex items-center gap-3">
                         <Avatar className="size-8">
                           <AvatarFallback className="text-xs">{item.avatar}</AvatarFallback>
